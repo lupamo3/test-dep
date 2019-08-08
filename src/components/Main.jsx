@@ -88,11 +88,11 @@ export default () => {
           <div className="col-sm">
             <p>
               <span>Max:</span>
-              {` 0${Math.max(...phoneNumbers)}`}
+              {phoneNumbers.length && ` 0${Math.max(...phoneNumbers)}`}
             </p>
             <p>
               <span>Min:</span>
-              {` 0${Math.min(...phoneNumbers)}`}
+              {phoneNumbers.length && ` 0${Math.min(...phoneNumbers)}`}
             </p>
             <p>
               <span>Total:</span>
