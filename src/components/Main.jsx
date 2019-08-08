@@ -85,20 +85,25 @@ export default () => {
               onChange={handleSortChange}
             />
           </div>
-          <div className="col-sm">
-            <p>
-              <span>Max:</span>
-              {phoneNumbers.length && ` 0${Math.max(...phoneNumbers)}`}
-            </p>
-            <p>
-              <span>Min:</span>
-              {phoneNumbers.length && ` 0${Math.min(...phoneNumbers)}`}
-            </p>
-            <p>
-              <span>Total:</span>
-              {` ${phoneNumbers.length}`}
-            </p>
-          </div>
+          {phoneNumbers.length
+            ? 
+              <div className="col-sm">
+                <p>
+                  <span>Max:</span>
+                  {` 0${Math.max(...phoneNumbers)}`}
+                </p>
+                <p>
+                  <span>Min:</span>
+                  {` 0${Math.min(...phoneNumbers)}`}
+                </p>
+                <p>
+                  <span>Total:</span>
+                  {` ${phoneNumbers.length}`}
+                </p>
+              </div>
+            :
+            null
+          }
         </div>
       </div>
       <div className="container phones">
