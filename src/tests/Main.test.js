@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Main from '../components/Main';
+import '../setUpTests'
 
 describe('Main', () => {
   let wrapper
