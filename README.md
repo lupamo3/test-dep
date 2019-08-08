@@ -5,3 +5,12 @@
 
 
 A react application for generating random number of phone numbers and storing them in a file
+
+## How to test
+- clone the repo
+- run `yarn` to install dependencies
+- run `yarn test` to test
+- run `yarn start` to run the application locally
+
+## Screenshot
+<img src="screenshot.png">
