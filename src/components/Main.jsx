@@ -20,7 +20,7 @@ export default () => {
 
   const handleInputChange = (e) => {
     const { value } = e.target;
-    if (isNaN(value)) {
+    if (isNaN(value) || Number(value) > 10000) {
       setError(true);
     } else {
       setNumbersCount(value);
@@ -55,7 +55,7 @@ export default () => {
             {error
               && (
               <div className="alert alert-danger" role="alert">
-                Please enter a valid number
+                Please enter a valid number or value less than 10000
               </div>
               )
             }
@@ -86,7 +86,7 @@ export default () => {
             />
           </div>
           {phoneNumbers.length
-            ? 
+            ?
               <div className="col-sm">
                 <p>
                   <span>Max:</span>
