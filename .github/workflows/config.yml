@@ -28,10 +28,10 @@ jobs:
       
 
 
-    - name: Setup Code Climate test-reporter
-      run: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
+    # - name: Setup Code Climate test-reporter
+    #   run: |
+    #         curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    #         chmod +x ./cc-test-reporter
 
     
     - name: Install dependencies
@@ -39,11 +39,11 @@ jobs:
       working-directory: src
 
 
-    - name: Run the tests and generate coverage report
-      run: |
-            ./cc-test-reporter before-build
-            yarn test ./src --coverage
-      working-directory: src
+    # - name: Run the tests and generate coverage report
+    #   run: |
+    #         ./cc-test-reporter before-build
+    #         yarn test ./src --coverage
+    #   working-directory: src
 
 
     - name: Build
