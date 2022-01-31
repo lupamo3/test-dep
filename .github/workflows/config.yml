@@ -42,7 +42,7 @@ jobs:
     
     - name: Install dependencies
       run: yarn install
-      working-directory: /Users/k22/Code/js/react/random-phone-no
+      working-directory: src
 
 
 
@@ -54,7 +54,7 @@ jobs:
 
     - name: Build
       run: yarn run build
-      working-directory: /Users/k22/Code/js/react/random-phone-no
+      working-directory: src
 
     - name: Print Success Message for CD finish
       run : echo "CD Pipeline part Finished successfully!"
