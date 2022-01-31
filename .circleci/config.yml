@@ -9,7 +9,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - run:
           name: Setup Dependencies
-          command: yarn installs
+          command: yarn install
       - run:
           name: Setup Code Climate test-reporter
           command: |
