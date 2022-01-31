@@ -49,7 +49,6 @@ jobs:
       run: |
             ./cc-test-reporter before-build
             yarn test ./src --coverage
-            ./cc-test-reporter after-build --exit-code $?
 
 
     - name: Build
