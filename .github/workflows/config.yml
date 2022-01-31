@@ -42,6 +42,7 @@ jobs:
     
     - name: Install dependencies
       run: yarn install
+      working-directory: client
 
 
 
@@ -53,6 +54,7 @@ jobs:
 
     - name: Build
       run: yarn run build
+      working-directory: client
 
     - name: Print Success Message for CD finish
       run : echo "CD Pipeline part Finished successfully!"
