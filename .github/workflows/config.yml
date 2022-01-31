@@ -23,7 +23,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      working-directory: src
 
 
     - name: Use Node.js ${{ matrix.node-version }}
