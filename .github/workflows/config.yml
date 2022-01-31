@@ -20,13 +20,16 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
+        working-directory: src
 
     steps:
     - uses: actions/checkout@v2
+      working-directory: src
 
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
+      working-directory: src
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -50,6 +53,7 @@ jobs:
       run: |
             ./cc-test-reporter before-build
             yarn test ./src --coverage
+      working-directory: src
 
 
     - name: Build
